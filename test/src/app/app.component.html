@@ -1,0 +1,28 @@
+<!-- <div class="calendar"><full-calendar [options]="calendarOptions"></full-calendar></div> -->
+<!-- <mat-slide-toggle [(ngModel)]="checked" class = "tp-margin" > </mat-slide-toggle> -->
+
+<div *ngIf="disabled == false; then falseBlock; else trueBlock"></div> 
+
+<ng-template #trueBlock><div class="on">on</div></ng-template>
+<ng-template #falseBlock><div class="off">off</div></ng-template>
+
+<mat-slide-toggle  [(ngModel)]="disabled">{{ disabled ? 'on' : 'off' }}</mat-slide-toggle>
+<!-- <div class="my_data" *ngFor="let location of location ">  -->
+<!-- 
+{{ location }} -->
+<!-- <div  > {{ weather | json }}</div> -->
+
+
+<!-- <ngx-json-viewer [json]="weather" [expanded]="false"></ngx-json-viewer> -->
+
+
+<li *ngFor="let product of json">
+    {{product.name}}
+    </li>
+    
+
+<!-- <p>{{todayNumber | date}}</p> --> 
+
+<!-- <div class="weather_data" *ngFor="let weather of weather$">
+<ul><li class="api"> {{ weather.name }}</li></ul>
+</div> -->
