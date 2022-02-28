@@ -1,0 +1,16 @@
+<div class="main-div">
+  <div *ngIf="disabled == false; then falseBlock; else trueBlock"></div> 
+  
+  <ng-template #trueBlock><div class="on"></div></ng-template>
+  <ng-template #falseBlock><div class="off"></div></ng-template>
+  
+  <mat-slide-toggle class="toggle" color="accent" [(ngModel)]="disabled">{{ disabled ? 'on' : 'off' }}</mat-slide-toggle>
+  
+  <div class="weather">
+  <div class="name"  > {{ weather.location.name }} <br></div> 
+  <div class="time" > {{ weather.location.localtime }}  <br></div>
+  <div class="text"  > {{ weather.current.condition.text }}  <br> </div>
+  <div class="temp">Temperature {{ weather.current.temp_c}} ℃ <br> </div> 
+  
+  </div>
+  
